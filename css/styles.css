@@ -135,6 +135,7 @@ li {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  overflow-x: hidden;
 }
 .underline {
   width: 5rem;

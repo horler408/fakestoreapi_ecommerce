@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>E-commerce</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <img width="50" height="50" src="" alt="Site Logo" />
+        <h2 class="site-title">Store</h2>
+        <form class="search">
+          <button type="submit" id="search-btn">Go</button>
+          <input type="text" id="search" placeholder="Search" />
+        </form>
+        <ul>
+          <li><a href="#">home</a></li>
+          <li><a href="#">gallery</a></li>
+          <li><a href="#">contact</a></li>
+          <li><a href="#">blog</a></li>
+        </ul>
+      </nav>
+      <!-- <div class="counter"></div> -->
+      <div class="filter">
+        <select class="select">
+          <option value="">Choose</option>
+          <option value="electronics">Electronics</option>
+          <option value="jewelery">Jewelery</option>
+          <option value="men's clothing">Men's Clothing</option>
+          <option value="women's clothing">Women's Clothing</option>
+        </select>
+      </div>
+      <div class="title">
+        <h2>Our Products</h2>
+        <div class="underline"></div>
+      </div>
+
+      <div class="item-container"></div>
+    </div>
+  </body>
+  <script src="./products/products.js"></script>
+</html>

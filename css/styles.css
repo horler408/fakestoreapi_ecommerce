@@ -10,6 +10,7 @@ body {
   font-size: 0.875rem;
   background: hsl(210, 36%, 96%);
   color: hsl(209, 61%, 16%);
+  overflow-x: hidden;
 }
 
 a {
@@ -135,7 +136,6 @@ li {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  overflow-x: hidden;
 }
 .underline {
   width: 5rem;
@@ -192,5 +192,12 @@ li {
   .item-container {
     width: 95vw;
     max-width: 50rem;
+  }
+  .product-item {
+    margin: 10px;
+  }
+
+  ul {
+    display: none;
   }
 }

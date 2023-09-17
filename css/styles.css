@@ -71,7 +71,6 @@ li {
 #search-btn {
   padding: 5px;
   font-size: 25px;
-
   outline: none;
 }
 
@@ -189,6 +188,9 @@ li {
 }
 
 @media screen and (max-width: 768px) {
+  nav {
+    height: 20vh;
+  }
   .item-container {
     width: 95vw;
     max-width: 50rem;
@@ -197,6 +199,22 @@ li {
     margin: 10px;
   }
 
+  ul {
+    display: none;
+  }
+  .search {
+  }
+
+  .btn-container {
+    flex-wrap: wrap;
+    max-width: 300px;
+  }
+  .filter-btn {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 820) {
   ul {
     display: none;
   }

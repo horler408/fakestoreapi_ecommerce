@@ -203,6 +203,8 @@ li {
     display: none;
   }
   .search {
+    top: 30%;
+    left: 10%;
   }
 
   .btn-container {

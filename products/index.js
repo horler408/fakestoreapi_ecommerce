@@ -87,7 +87,8 @@ const displayItemBtns = (items) => {
   const categories = items.reduce(
     (values, item) => {
       if (!values.includes(item.category)) {
-        values.push(item.category);
+        joinedCategory = item.category.split(' ').join('_');
+        values.push(joinedCategory);
       }
       return values;
     },
@@ -96,7 +97,7 @@ const displayItemBtns = (items) => {
   //console.log(categories);
   const categoryBtns = categories
     .map((category) => {
-      return `<button class="filter-btn" data-id=${category} type="button">
+      return `<button class='filter-btn' data-id=${category} type='button'>
           ${category}
         </button>`;
     })
@@ -108,10 +109,12 @@ const displayItemBtns = (items) => {
   //Filter Items
   filterBtns.forEach((btn) => {
     btn.addEventListener('click', (e) => {
-      //console.log(e.currentTarget.dataset.id);
+      console.log(e.currentTarget.dataset.id);
       const category = e.currentTarget.dataset.id;
-      const menuCategory = items.filter((productItem) => {
-        if (productItem.category === category) {
+      const itemCategory = items.filter((productItem) => {
+        let splitedCategory = category.split('_').join(' ');
+
+        if (productItem.category === splitedCategory) {
           return productItem;
         }
       });
@@ -119,7 +122,7 @@ const displayItemBtns = (items) => {
       if (category === 'all') {
         getProducts(items);
       } else {
-        getProducts(menuCategory);
+        getProducts(itemCategory);
       }
     });
   });
